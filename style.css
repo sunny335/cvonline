@@ -23,6 +23,9 @@ a{
     justify-content: space-between;
     background-image: linear-gradient(180deg,#A9FBC3 0%,#58D197 100%);
     padding-top: 10px;
+    /* new add code */
+    padding-bottom: 60px;
+    /* new add code */
     font-family: Lato;
 }
 .hero .container{
@@ -588,35 +591,97 @@ a h4{
     }
 }
 
+/* new add code */
 
 
-#exTab1 .tab-content {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
+.tabs-2 {
+display: flex;
+flex-wrap: wrap;
+background-color: #fff;
+padding: 0 !important;
+border-top-left-radius: 10px !important;
+border-top-right-radius: 10px !important;
+}
+.tabs-2 > section {
+  order: 999;
+  width: 100%;
+  display: none;
+}
+.tabs-2 > input {
+  opacity: 0;
+  position: absolute;
 }
 
-#exTab2 h3 {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
+.tabs-2 > input[type=radio]:checked + label {
+
 }
 
-/* remove border radius for the tab */
-
-#exTab1 .nav-pills > li > a {
-  border-radius: 0;
+.tabs-2 > input[type=radio]:checked + label + section {
+  display: unset;
 }
 
-/* change border radius for the tab , apply corners on top*/
-
-#exTab3 .nav-pills > li > a {
-  border-radius: 4px 4px 0 0 ;
+.tabs-2 > label {
+  padding: 1em 1em;
+  background: #FFF;
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
+  color: #9A9A9F;
+  font-weight: 700;
+}
+.tabs-2 > label .tab-bage{
+  background-color: #f1f1f1;
+	font-size: 0.6rem;
+	padding: 3px 6px;
+	margin-left: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
-#exTab3 .tab-content {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
+.tabs-2 > label:nth-child(2) {
+  border-top-left-radius: 10px !important;
+
 }
+
+@media (max-width:992px) {
+    .tabs-2 > label {
+    width: 100%;
+  }
+  .line-shadow {
+    top: 216px !important;
+  }
+  .tabs-2 > label:nth-child(2) {
+  border-top-right-radius: 10px !important;
+
+}
+}
+.tabs-2 > label:last-of-type {
+  border-right: none;
+  border-top-right-radius: 10px !important
+}
+.tabs-2 > input[type=radio]:checked + label {
+
+      border-bottom: 4px solid #152A3F;
+    color: #333333;
+    cursor: pointer;
+}
+.tabs-2 > input[type=radio]:checked + label .tab-bage {
+    background-color: #ccd9e5;
+    color: #152A3F;
+}
+
+.line-shadow{
+      position: absolute;
+    width: 100%;
+    height: 4px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 54px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* new add code */
+
 
